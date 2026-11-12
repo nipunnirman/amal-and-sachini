@@ -162,8 +162,8 @@ function TimelineItem({ item }) {
 
 function ProgramSchedule() {
   const schedule = [
-    { time: "පෙ.ව. 11.00", title: "සාදය ආරම්භය", desc: "ඔබ සැමව ඉතා සාදරයෙන් පිළිගනිමු.", icon: "entrance" },
-    { time: "ප.ව. 3.00", title: "සාදය අවසානය", desc: "අප සමග සතුට බෙදාගත් ඔබ සැමට හෘදයාංගම ස්තූතිය.", icon: "departure" }
+    { time: "පෙ.ව. 11.00", title: "සාදය ආරම්භය", desc: "ඔබව ඉතා සාදරයෙන් පිළිගනිමු.", icon: "entrance" },
+    { time: "ප.ව. 3.00", title: "සාදය අවසානය", desc: "අප සමග සතුට බෙදාගත් ඔබට හෘදයාංගම ස්තූතිය.", icon: "departure" }
   ]
 
   return (
@@ -294,7 +294,7 @@ function Home() {
           <h3 className="venue-name si-venue">තිසෝගම, වෙලන්ගොල්ල අප නිවසේ</h3>
           <p className="si-text">
             පැවැත්වෙන ප්‍රිය සාදයට සහභාගී වන මෙන්<br />
-            ඔබ සැමට කෙරෙන ගෞරවණීය ඇරයුමයි
+            ඔබට කෙරෙන ගෞරවණීය ඇරයුමයි
           </p>
         </div>
 

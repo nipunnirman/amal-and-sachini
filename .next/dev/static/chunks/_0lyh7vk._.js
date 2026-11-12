@@ -892,13 +892,13 @@ function ProgramSchedule() {
         {
             time: "පෙ.ව. 11.00",
             title: "සාදය ආරම්භය",
-            desc: "ඔබ සැමව ඉතා සාදරයෙන් පිළිගනිමු.",
+            desc: "ඔබව ඉතා සාදරයෙන් පිළිගනිමු.",
             icon: "entrance"
         },
         {
             time: "ප.ව. 3.00",
             title: "සාදය අවසානය",
-            desc: "අප සමග සතුට බෙදාගත් ඔබ සැමට හෘදයාංගම ස්තූතිය.",
+            desc: "අප සමග සතුට බෙදාගත් ඔබට හෘදයාංගම ස්තූතිය.",
             icon: "departure"
         }
     ];
@@ -1358,7 +1358,7 @@ function Home() {
                                                 lineNumber: 296,
                                                 columnNumber: 50
                                             }, this),
-                                            "ඔබ සැමට කෙරෙන ගෞරවණීය ඇරයුමයි"
+                                            "ඔබට කෙරෙන ගෞරවණීය ඇරයුමයි"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/Invitation.jsx",
