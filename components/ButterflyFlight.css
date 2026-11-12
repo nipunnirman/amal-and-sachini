@@ -1,0 +1,44 @@
+.butterfly-flight {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  overflow: hidden;
+  pointer-events: none;
+}
+.butterfly-trail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 46px;
+  height: 42px;
+  opacity: 0;
+  animation: butterfly-fly 17s ease-in-out infinite;
+}
+.butterfly-trail-1 { animation-delay: 2.5s; animation-duration: 21s; width: 35px; }
+.butterfly-trail-2 { animation-delay: 5s; animation-duration: 19s; width: 40px; }
+.fluttering-butterfly { width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 3px 3px #2e648b20); }
+.butterfly-wing { fill: #87c4ef; stroke: #3986bd; stroke-width: .9; transform-origin: 40px 36px; animation: butterfly-flutter .32s ease-in-out infinite alternate; }
+.butterfly-wing-right { animation-delay: -.08s; fill: #b9def9; }
+.butterfly-vein { fill: none; stroke: #4181af; stroke-width: .8; }
+.butterfly-body { fill: #2b6691; }
+@keyframes butterfly-flutter {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(.25); }
+}
+@keyframes butterfly-fly {
+  0% { left: -8%; top: 650px; opacity: 0; transform: rotate(25deg); }
+  8% { opacity: .85; }
+  24% { left: 28%; top: 420px; transform: rotate(-18deg); }
+  44% { left: 72%; top: 530px; transform: rotate(30deg); }
+  64% { left: 45%; top: 240px; transform: rotate(-22deg); opacity: .8; }
+  85% { left: 86%; top: 110px; transform: rotate(20deg); opacity: .65; }
+  100% { left: 104%; top: -60px; transform: rotate(-10deg); opacity: 0; }
+}
+@media (max-width: 480px) {
+  .butterfly-trail { width: 32px; }
+  .butterfly-trail-1 { width: 26px; }
+  .butterfly-trail-2 { width: 29px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .butterfly-flight { display: none; }
+}

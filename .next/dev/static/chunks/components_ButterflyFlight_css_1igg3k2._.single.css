@@ -1,0 +1,138 @@
+/* [project]/components/ButterflyFlight.css [app-client] (css) */
+.butterfly-flight {
+  z-index: 6;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.butterfly-trail {
+  opacity: 0;
+  width: 46px;
+  height: 42px;
+  animation: 17s ease-in-out infinite butterfly-fly;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.butterfly-trail-1 {
+  width: 35px;
+  animation-duration: 21s;
+  animation-delay: 2.5s;
+}
+
+.butterfly-trail-2 {
+  width: 40px;
+  animation-duration: 19s;
+  animation-delay: 5s;
+}
+
+.fluttering-butterfly {
+  filter: drop-shadow(0 3px 3px #2e648b20);
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.butterfly-wing {
+  fill: #87c4ef;
+  stroke: #3986bd;
+  stroke-width: .9px;
+  transform-origin: 40px 36px;
+  animation: .32s ease-in-out infinite alternate butterfly-flutter;
+}
+
+.butterfly-wing-right {
+  fill: #b9def9;
+  animation-delay: -.08s;
+}
+
+.butterfly-vein {
+  fill: none;
+  stroke: #4181af;
+  stroke-width: .8px;
+}
+
+.butterfly-body {
+  fill: #2b6691;
+}
+
+@keyframes butterfly-flutter {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(.25);
+  }
+}
+
+@keyframes butterfly-fly {
+  0% {
+    opacity: 0;
+    top: 650px;
+    left: -8%;
+    transform: rotate(25deg);
+  }
+
+  8% {
+    opacity: .85;
+  }
+
+  24% {
+    top: 420px;
+    left: 28%;
+    transform: rotate(-18deg);
+  }
+
+  44% {
+    top: 530px;
+    left: 72%;
+    transform: rotate(30deg);
+  }
+
+  64% {
+    opacity: .8;
+    top: 240px;
+    left: 45%;
+    transform: rotate(-22deg);
+  }
+
+  85% {
+    opacity: .65;
+    top: 110px;
+    left: 86%;
+    transform: rotate(20deg);
+  }
+
+  100% {
+    opacity: 0;
+    top: -60px;
+    left: 104%;
+    transform: rotate(-10deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .butterfly-trail {
+    width: 32px;
+  }
+
+  .butterfly-trail-1 {
+    width: 26px;
+  }
+
+  .butterfly-trail-2 {
+    width: 29px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .butterfly-flight {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=components_ButterflyFlight_css_1igg3k2._.single.css.map*/

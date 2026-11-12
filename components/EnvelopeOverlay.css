@@ -1,0 +1,180 @@
+.envelope-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  padding: 44px 28px;
+  background: radial-gradient(ellipse at 50% 40%, #f8fcff, #deebf4);
+  color: #3a4b57;
+
+}
+
+.envelope-heading { text-align: center; }
+.envelope-eyebrow, .envelope-date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: .26em;
+  color: #56778f;
+}
+.envelope-heading h2 {
+  margin: 17px 0 18px;
+  font-family: 'Baskerville', Georgia, serif;
+  font-size: clamp(32px, 6vw, 46px);
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -.035em;
+}
+.envelope-heading h2 span { color: #4384b2; font-style: italic; font-size: .8em; margin: 0 5px; }
+.envelope-date { font-size: 9px; letter-spacing: .2em; }
+.envelope-wrapper {
+  position: relative;
+  width: min(100%, 470px);
+  aspect-ratio: 1.48;
+  flex-shrink: 0;
+  background: #ddedf8;
+  border: 1px solid #8ab1cc;
+  border-radius: 3px;
+  perspective: 1400px;
+  box-shadow: 0 24px 42px -22px #4b657755, 0 3px 8px #4b65770c;
+}
+.envelope-back { position: absolute; inset: 0; background: linear-gradient(#bcd6e9, #ddedf8); }
+.envelope-card-preview {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f7fcff;
+  border: 1px solid #a4c5dc;
+  text-align: center;
+}
+.envelope-card-preview p { font-size: 11px; letter-spacing: .12em; }
+.envelope-card-preview span { font-family: 'Wedding Script', cursive; font-size: 36px; color: #3976a1; }
+.flap { position: absolute; inset: 0; backface-visibility: hidden; }
+.flap-left { background: linear-gradient(100deg, #ebf4fa, #d6e7f3); clip-path: polygon(0 0, 55% 53%, 0 100%); z-index: 1; }
+.flap-right { background: linear-gradient(-100deg, #ebf4fa, #d6e7f3); clip-path: polygon(100% 0, 45% 53%, 100% 100%); z-index: 1; }
+.flap-bottom { background: linear-gradient(0deg, #eaf4fb, #cfe3f1); clip-path: polygon(0 100%, 50% 43%, 100% 100%); z-index: 2; }
+.flap-top {
+  height: 58%;
+  background: linear-gradient(160deg, #f8fcff, #dcecf7);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform .9s cubic-bezier(.2,.7,.3,1);
+  z-index: 3;
+}
+
+.wax-seal {
+  position: absolute;
+  top: 56%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76px; height: 76px;
+  padding: 4px;
+  border: 1px solid #4f8fbd;
+  border-radius: 50%;
+  background: #f5fbff;
+  box-shadow: 0 4px 10px #335d7b22, inset 0 0 0 3px #d2e7f6;
+  z-index: 5;
+  cursor: pointer;
+  transition: transform .3s, opacity .3s;
+}
+.wax-seal:hover { transform: translate(-50%, -50%) scale(1.06); }
+.wax-seal-logo { width: 100%; height: 100%; border-radius: 50%; object-fit: contain; }
+.envelope-flowers {
+  position: absolute;
+  width: 115px; height: 190px;
+  object-fit: contain;
+  right: -13px; bottom: -15px;
+  z-index: 4;
+  pointer-events: none;
+  transition: opacity .4s;
+}
+
+.envelope-footer { text-align: center; }
+.envelope-open-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0 0 10px;
+  border: 0;
+  border-bottom: 1px solid #5994be;
+  background: transparent;
+  color: #305773;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.envelope-open-link span { font-size: 17px; }
+.envelope-footer p { margin-top: 18px; font-size: 13px; font-style: italic; color: #6387a1; }
+@media (max-width: 480px) {
+  .envelope-overlay { gap: 36px; padding: 32px 30px; }
+  .envelope-flowers { width: 85px; height: 140px; right: -10px; bottom: -12px; }
+  .wax-seal { width: 66px; height: 66px; }
+}
+@media (max-height: 650px) {
+  .envelope-overlay { justify-content: flex-start; gap: 24px; padding-top: 24px; }
+  .envelope-wrapper { max-width: 360px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .envelope-overlay, .flap-top, .wax-seal, .envelope-flowers { transition: none; }
+}
+
+/* Seal, hinged flap, extracted letter, then the full invitation. */
+.envelope-letter { position: absolute; inset: 14px 18px; z-index: 0; transform-origin: center; }
+.envelope-card-preview { position: relative; overflow: hidden; box-shadow: 0 4px 18px #335d7b18; padding: 18px; }
+.letter-monogram { width: 70px; height: 70px; object-fit: contain; }
+.letter-flowers { position: absolute; width: 95px; right: -20px; bottom: -35px; opacity: .7; pointer-events: none; }
+.envelope-card-preview .letter-date { font-size: 9px; letter-spacing: .2em; }
+.envelope-heading, .envelope-footer { transition: opacity .35s, transform .5s; }
+.envelope-overlay.is-opening { overflow: hidden; animation: envelope-reveal .65s ease 3.55s forwards; }
+.is-opening .envelope-heading, .is-opening .envelope-footer { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.envelope-wrapper.open { animation: envelope-settle 3.55s ease-in-out forwards; }
+.envelope-wrapper.open .wax-seal { animation: seal-release .5s ease forwards; pointer-events: none; }
+.envelope-wrapper.open .flap-top { backface-visibility: visible; animation: flap-unfold 1.1s cubic-bezier(.4,0,.2,1) .35s forwards; }
+.envelope-wrapper.open .envelope-letter { animation: letter-extract 2.6s cubic-bezier(.4,0,.2,1) 1s forwards; }
+.envelope-wrapper.open .envelope-flowers { animation: envelope-decoration-away .7s ease 2.5s forwards; }
+@keyframes seal-release {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  45% { opacity: 1; transform: translate(-50%, -50%) scale(1.12) rotate(-9deg); }
+  100% { opacity: 0; transform: translate(-50%, -20%) scale(.85) rotate(-18deg); }
+}
+@keyframes flap-unfold {
+  0% { transform: rotateX(0); z-index: 3; }
+  49% { z-index: 3; }
+  50% { z-index: 0; }
+  100% { transform: rotateX(-175deg); z-index: 0; filter: brightness(.96); }
+}
+@keyframes letter-extract {
+  0% { transform: translateY(0); z-index: 0; }
+  45% { transform: translateY(-78%); z-index: 0; }
+  46% { z-index: 6; }
+  65% { transform: translateY(-48%) scale(1.08); z-index: 6; }
+  82% { transform: translateY(-30%) scale(1.15); z-index: 6; opacity: 1; }
+  100% { transform: translateY(-20%) scale(2.1); z-index: 6; opacity: 0; }
+}
+@keyframes envelope-settle {
+  0%, 25% { transform: translateY(0); }
+  55%, 75% { transform: translateY(55px); }
+  100% { transform: translateY(85px); }
+}
+@keyframes envelope-decoration-away { to { opacity: 0; } }
+@keyframes envelope-reveal { to { opacity: 0; visibility: hidden; } }
+@media (max-width: 480px) {
+  .envelope-letter { inset: 10px 12px; }
+  .envelope-card-preview { padding: 10px; gap: 7px; }
+  .letter-monogram { width: 48px; height: 48px; }
+  .envelope-card-preview span { font-size: 28px; }
+  .envelope-card-preview p { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .envelope-overlay.is-opening { opacity: 0; }
+  .envelope-heading, .envelope-footer { transition: none; }
+}
