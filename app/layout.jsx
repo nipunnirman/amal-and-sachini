@@ -8,10 +8,11 @@ export const metadata = {
   metadataBase: new URL('https://amal-and-sachini.vercel.app'),
   icons: {
     icon: [
-      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico?v=as2', sizes: 'any' },
+      { url: '/favicon-48.png?v=as2', sizes: '48x48', type: 'image/png' },
+      { url: '/icon-512.png?v=as2', sizes: '512x512', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: '/apple-icon.png?v=as2',
   },
   openGraph: {
     title: 'Amal & Sachini',
