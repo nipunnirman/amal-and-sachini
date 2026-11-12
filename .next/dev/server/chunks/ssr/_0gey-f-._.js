@@ -18,8 +18,35 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 const metadata = {
     title: 'Amal & Sachini',
     description: 'You are warmly invited to celebrate with Amal & Sachini on December 11, 2026.',
+    metadataBase: new URL('https://amal-and-sachini.vercel.app'),
     icons: {
-        icon: '/favicon.svg'
+        icon: [
+            {
+                url: '/favicon-48.png',
+                sizes: '48x48',
+                type: 'image/png'
+            },
+            {
+                url: '/icon-512.png',
+                sizes: '512x512',
+                type: 'image/png'
+            }
+        ],
+        apple: '/apple-icon.png'
+    },
+    openGraph: {
+        title: 'Amal & Sachini',
+        description: 'You are warmly invited to celebrate with Amal & Sachini on December 11, 2026.',
+        url: 'https://amal-and-sachini.vercel.app',
+        images: [
+            {
+                url: '/assets/logo.png',
+                width: 1254,
+                height: 1254,
+                alt: 'Amal & Sachini'
+            }
+        ],
+        type: 'website'
     }
 };
 const viewport = {
@@ -38,7 +65,7 @@ function RootLayout({ children }) {
                         href: "https://fonts.googleapis.com"
                     }, void 0, false, {
                         fileName: "[project]/app/layout.jsx",
-                        lineNumber: 21,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -47,7 +74,7 @@ function RootLayout({ children }) {
                         crossOrigin: "anonymous"
                     }, void 0, false, {
                         fileName: "[project]/app/layout.jsx",
-                        lineNumber: 22,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("link", {
@@ -55,13 +82,13 @@ function RootLayout({ children }) {
                         rel: "stylesheet"
                     }, void 0, false, {
                         fileName: "[project]/app/layout.jsx",
-                        lineNumber: 23,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/layout.jsx",
-                lineNumber: 20,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("body", {
@@ -70,18 +97,18 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/app/layout.jsx",
-                    lineNumber: 25,
+                    lineNumber: 39,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/layout.jsx",
-                lineNumber: 25,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/layout.jsx",
-        lineNumber: 19,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }

@@ -5,7 +5,21 @@ import '../components/ButterflyFlight.css'
 export const metadata = {
   title: 'Amal & Sachini',
   description: 'You are warmly invited to celebrate with Amal & Sachini on December 11, 2026.',
-  icons: { icon: '/favicon.svg' },
+  metadataBase: new URL('https://amal-and-sachini.vercel.app'),
+  icons: {
+    icon: [
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'Amal & Sachini',
+    description: 'You are warmly invited to celebrate with Amal & Sachini on December 11, 2026.',
+    url: 'https://amal-and-sachini.vercel.app',
+    images: [{ url: '/assets/logo.png', width: 1254, height: 1254, alt: 'Amal & Sachini' }],
+    type: 'website',
+  },
 }
 
 export const viewport = {
